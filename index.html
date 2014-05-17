@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sally and Joey's Wedding</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.js"></script>
+
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+        return false;
+        }
+    }
+  });
+});
+</script>
+<link rel="icon" type="image/png" id="favicon" href="../images/favicon.png"/>
+</head>
+
+<body>
+<div class="navigation">
+    <nav>
+        <ul>
+            <li class="home"><a href="../index.html">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="#ceremony">Ceremony & Reception</a></li>
+            <li><a href="#weekend">Weekend Events</a></li>
+            <li><a href="#accommodations">Accommodations</a></li>
+            <li><a href="#registries">Registries</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="clear"></div>
+
+<div id="home" data-type="text" data-speed="3">
+    <div class="hometext">
+        <h1>Sally & Joey</h1>
+        <h3>are tying the knot</h3>
+        <h2>at</h2>
+        <h3>the Dunsmuir Estate</h3>
+        <h2>on August 2, 2014</h2>
+    </div>
+</div>
+
+<div class="pic1" data-type="background" data-speed="10"></div>
+
+
+<div class="ceremony" data-type="background" data-speed="7">
+<div id="ceremony"></div>
+    <div class="interior">
+        <div>
+            <h2>The Ceremony & Reception</h2>
+            <p>The ceremony and reception will both be held on the lawns of the beautiful Dunsmuir Hellman Historic Estate in Oakland.</p>
+            <div class="buttons">
+                <a href="http://dunsmuir-hellman.com/">View Photos</a>
+                <a href="https://www.google.com/maps/preview/dir/Dunsmuir+Hellman+Historic+Estate,+2960+Peralta+Oaks+Ct,+Oakland,+CA+94605/@37.7658068,-122.2443192,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x808f8f09080aa547:0xf8cf6c585f5e0c74!2m2!1d-122.144566!2d37.743757">Get Directions</a>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3154.973888624202!2d-122.1445656!3d37.7437568!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0:0xf8cf6c585f5e0c74!5e0!3m2!1sen!2sus!4v1389553923335" height="400" frameborder="0" style="border:0"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="pic2" data-type="background" data-speed="20"></div>
+
+<div class="weekend" data-type="background" data-speed="7">
+<div id="weekend" class="in-page-anchor"></div>
+    <div class="interior">
+        <h2>Weekend Events</h2>
+        <p>More information to come about Friday’s rehearsal dinner and Sunday’s brunch!</p>
+    </div>
+</div>
+
+
+<div class="pic3" data-type="background" data-speed="20"></div>
+
+<div class="accommodations" data-type="background" data-speed="7">
+<div id="accommodations" class="in-page-anchor"></div>
+    <div class="interior">
+        <h2>Accommodations</h2>
+        <p>We will be setting up a block of rooms at the Hilton Garden Inn in San Leandro. More details about this and other area hotels will be up soon!</p>
+    </div>
+</div>
+
+<div class="pic4" data-type="background" data-speed="20"></div>
+
+
+<div class="registries" data-type="background" data-speed="7">
+<div id="registries" class="in-page-anchor"></div>
+    <div class="interior">
+        <h2>Registries</h2>
+        <p>Sally and Joey are registered at the following places:</p>
+        <a href="http://www.crateandbarrel.com/Gift-Registry/Sally-Gross-and-Joey-Holland/r5080330">
+            <div class="frame"><img src="images/cratebarrel.png" class="cratebarrel" /></div>
+            <h4>View Registry</h4>
+        </a>
+        <a href="https://secure.williams-sonoma.com/registry/rl7wztsrkr/registry-list.html">
+            <div class="frame"><img src="images/williamssonoma.png" class="williamssonoma" /></div>
+            <h4>View Registry</h4>
+        </a>
+        <a href="http://www.potterybarn.com/registry/3355283/registry-list.html">
+            <div class="frame"><img src="images/potterybarn.png" class="potterybarn" /></div>
+            <h4>View Registry</h4>
+        </a>
+        <a href="http://www.honeyfund.com/wedding/sallyandjoey">
+            <div class="frame"><img src="images/honeyfund.png" class="honeyfund" /></div>
+            <h4>View Registry</h4>
+        </a>
+    </div>
+</div>
+
+<div class="thanks-text" data-type="text2" data-speed="3">
+    <p>We can't wait to celebrate with you!</p>
+</div>
+
+<div class="pic5"></div>
+
+<div class="rsvp">
+<div id="rsvp" class="in-page-anchor"></div>
+    <div class="interior">
+        <h2>RSVP</h2>
+        <p>Please enter the names of everyone in your party who will be attending!</p>
+        <form>
+            <label>First Name</label>
+            <input type="text">
+            <label>Last Name</label>
+            <input type="text">
+            <input type="submit" value="RSVP">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+<!-- Localized -->
