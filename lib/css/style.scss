@@ -158,6 +158,26 @@ hr {
         height: 70px;
         width: 70px;
       }
+
+      li.rsvp-link a {
+        transition: background-color 0.2s;
+        text-transform: uppercase;
+        font-size: 17px;
+        letter-spacing: 1px;
+        border: 1px solid #656565;
+        background-color: #656565;
+        color: #FFF;
+        border-radius: 20px;
+        padding: 8px 14px;
+        width: 100px;
+        font-family: 'Pathway Gothic One', sans-serif;
+
+        &:hover {
+          border: 1px solid #656565;
+          background-color: #FFF;
+          color: #656565;
+        }
+      }
     }
   }
 }
@@ -189,7 +209,7 @@ hr {
 
 .interior {
   width: 960px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
 .ceremony, .accommodations, .registries, .weekend, .rsvp {
@@ -228,6 +248,7 @@ hr {
 
 #pic5 {
   background-image: url("../images/profile2.jpg");
+  padding: 350px 0;
 }
 
 .ceremony {
@@ -275,24 +296,26 @@ hr {
 }
 
 .registries {
+  .frame-wrap {
+    width:100%;
+  }
+
   a {
     float: left;
-    padding: 0 13px;
+    width: 23%;
+    margin: 0 1%;
 
     .frame {
       position: relative;
       background: #FDEEED;
       padding: 0 10px;
       height: 194px;
-      width: 194px;
 
       img {
         position: relative;
         height: auto;
         top: 50%;
-        left: 50%;
-        margin-left: -99px;
-        width: 198px;
+        width: 100%;
 
         &.cratebarrel {
           margin-top: -15px;
@@ -407,7 +430,6 @@ hr {
 
 .rsvp {
   form {
-    width: 600px;
     margin: 0 auto;
 
     .ss-form-entry {
@@ -476,26 +498,12 @@ hr {
   clear: both;
 }
 
-@media all and (min-width: 0px) and (max-width: 960px) {
-  .registries{
-    a img {
-      width: 125px;
-      margin-left: -67px;
-
-      &.cratebarrel {
-        top: 41%;
-      }
-
-      &.williamssonoma {
-        top: 42%;
-      }
-
-      &.potterybarn {
-        top: 43%;
-      }
-    }
+@media all and (min-width: 1300px){
+  .bgd {
+    background-size: 100%;
   }
-
+}
+@media all and (min-width: 0px) and (max-width: 960px) {
   .in-page-anchor {
     height: 0;
     margin-top: 0;
@@ -508,7 +516,11 @@ hr {
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 960px) {
+@media all and (min-width: 768px) and (max-width: 960px) {
+  #pic2 {
+    background-size: 150%;
+  }
+
   .navigation nav {
     width: 100%;
   }
@@ -522,26 +534,13 @@ hr {
   }
 
   .ceremony{
+    h2:before {
+      width: 15%;
+    }
+
     h2:after {
       width: 15%;
       right: -85%;
-    }
-  }
-
-  .registries {
-    h2:after {
-      width: 36%;
-      right: -64%;
-    }
-
-    a .frame {
-      width: 144px;
-      height: 144px;
-
-      img {
-        width: 144px;
-        margin-left: -72px;
-      }
     }
   }
 
@@ -576,23 +575,32 @@ hr {
     }
   }
 
-  .thanks-text {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    margin-left: -50%;
+  .rsvp {
+    h2:before {
+      width: 35%;
+    }
+
+    h2:after {
+      width: 35%;
+      right: -65%;
+    }
   }
 }
 
-@media all and (max-width: 500px) {
-  .pic1, .pic2, .pic3, .pic4, .pic5 {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 320px;
+@media all and (max-width: 768px) {
+  #pic1, #pic2, #pic3, #pic4, #pic5 {
+    background-size: 100%;
+    padding: 170px 0;
     margin-top: 0;
     position: relative;
+  }
+
+  #pic1, #pic5 {
+    background-size: 200%;
+  }
+
+  #pic3 {
+    background-size: 150%;
   }
 
   .ceremony, .accommodations, .registries, .weekend, .rsvp {
@@ -604,9 +612,13 @@ hr {
     font-size: 28px;
   }
 
+  h3 {
+    font-size: 24px;
+  }
+
   .navigation nav {
     width: 100%;
-    height: 230px;
+    height: 270px;
 
     ul{
       &:nth-child(1) {
@@ -630,16 +642,16 @@ hr {
   }
 
   #home {
-    top: 0;
+    margin: 10px auto;
     width: 100%;
     position: relative;
 
     .hometext {
-      border-top: 1px solid #CCC;
+      border-bottom: 1px solid #CCC;
       width: 310px;
       color: #656565;
       margin: 0 auto;
-      padding: 15px 0;
+      padding: 25px 0;
 
       h1 {
         font-size: 40px;
@@ -672,7 +684,7 @@ hr {
 
   .registries{
     a {
-      float: none;
+      width: 48%;
 
       .frame {
         margin: 0 auto;
@@ -726,17 +738,27 @@ hr {
     left: 0;
   }
 
-  .rsvp h2 {
-    border-bottom: none;
+  .rsvp {
+    h2:before {
+      border-bottom: none;
+    }
+
+    h2:after {
+      border-bottom: none;
+    }
   }
 }
 
-.google {
-  iframe {
-    font-family: "Parisienne";
-    font-size: 100px;
-    .ss-footer {
-      display:none;
-    }
+@media all and (min-width: 600px) and (max-width: 1300px){
+  .bgd {
+    background-size: 150%;
+  }
+
+  #pic1, #pic5 {
+    background-size: 120%;
+  }
+
+  #pic2, #pic3 {
+    background-size: 100%;
   }
 }
