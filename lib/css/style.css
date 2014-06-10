@@ -23,7 +23,8 @@ time, mark, audio, video {
 
 body {
   font-family: "Cardo", serif;
-  color: #656565; }
+  color: #656565;
+  height: auto !important; }
 
 a {
   text-decoration: none; }
@@ -127,9 +128,8 @@ hr {
 
 #home {
   position: relative;
-  top: 180px;
   width: 960px;
-  margin: 0 auto; }
+  margin: -510px auto 210px auto; }
   #home .hometext {
     text-align: center;
     width: 330px;
@@ -137,10 +137,10 @@ hr {
     #home .hometext h1 {
       font-size: 60px; }
     #home .hometext h2 {
-      font-size: 40px;
       margin-bottom: 0; }
     #home .hometext h3 {
-      font-size: 38px; }
+      font-size: 38px;
+      margin: 0; }
 
 .interior {
   width: 960px;
@@ -151,74 +151,62 @@ hr {
   padding: 20px 0;
   width: 100%; }
 
-.pic1, .pic2, .pic3, .pic4, .pic5 {
-  width: 100%;
+.bgd {
   z-index: -1000;
-  height: 700px; }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  padding: 500px 0;
+  width: 100%; }
 
-.pic1 {
-  background: url("../images/profile1.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  top: 0;
-  height: 1000px;
-  background-position: 50% 0;
-  position: absolute; }
+#pic1 {
+  background-image: url("../images/profile1.jpg");
+  padding: 350px 0; }
 
-.ceremony {
-  margin-top: 300px; }
-  .ceremony h2:before {
-    content: '';
-    border-bottom: 1px solid #CCC;
-    width: 25%;
-    display: block;
-    position: relative;
-    top: 27px; }
-  .ceremony h2:after {
-    content: '';
-    border-bottom: 1px solid #CCC;
-    width: 25%;
-    display: block;
-    position: relative;
-    top: -28px;
-    right: -75%; }
-  .ceremony p {
-    margin-bottom: 10px; }
-  .ceremony .buttons {
-    display: block;
-    margin: 10px auto 0 auto;
-    width: 320px; }
-    .ceremony .buttons a {
-      transition: background-color 0.2s;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 17px;
-      letter-spacing: 1px;
-      margin: 15px;
-      border: 1px solid #656565;
-      background-color: #FFF;
-      border-radius: 20px;
-      color: #656565;
-      padding: 8px 14px;
-      display: block;
-      width: 100px;
-      font-family: 'Pathway Gothic One', sans-serif;
-      float: left; }
-      .ceremony .buttons a:hover {
-        background-color: #656565;
-        color: #FFF; }
-  .ceremony iframe {
-    padding-top: 15px;
-    width: 100%; }
+#pic2 {
+  background-image: url("../images/ring.jpg");
+  background-size: 100%; }
 
-.pic2 {
-  background: url("../images/ring.jpg") no-repeat center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+#pic3 {
+  background-image: url("../images/romcom.jpg");
+  background-size: 150%; }
+
+#pic4 {
+  background-image: url("../images/longshot.jpg"); }
+
+#pic5 {
+  background-image: url("../images/profile2.jpg"); }
+
+.ceremony h2:before {
+  content: '';
+  border-bottom: 1px solid #CCC;
+  width: 25%;
+  display: block;
+  position: relative;
+  top: 27px; }
+.ceremony h2:after {
+  content: '';
+  border-bottom: 1px solid #CCC;
+  width: 25%;
+  display: block;
+  position: relative;
+  top: -28px;
+  right: -75%; }
+.ceremony p {
+  margin-bottom: 10px; }
+.ceremony .buttons {
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 320px; }
+  .ceremony .buttons .button {
+    margin: 15px;
+    padding: 8px 14px;
+    display: block;
+    width: 100px;
+    float: left; }
+.ceremony iframe {
+  padding-top: 15px;
+  width: 100%; }
 
 .registries a {
   float: left;
@@ -263,13 +251,6 @@ hr {
   top: -28px;
   right: -61%; }
 
-.pic3 {
-  background: url("../images/romcom.jpg") no-repeat center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 .accommodations h2:before {
   content: '';
   border-bottom: 1px solid #CCC;
@@ -290,14 +271,6 @@ hr {
   margin-left: 2px; }
   .accommodations .images img:first-child {
     margin-left: 0; }
-
-.pic4 {
-  background: url("../images/longshot.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 1000px; }
 
 .weekend h2:before {
   content: '';
@@ -328,49 +301,51 @@ hr {
     font-size: 40px;
     line-height: 50px; }
 
-.pic5 {
-  background: url("../images/profile2.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.rsvp {
-  display: none; }
-  .rsvp form {
-    width: 600px;
+.rsvp form {
+  width: 600px;
+  margin: 0 auto; }
+  .rsvp form .ss-form-entry {
+    width: 200px;
     margin: 0 auto; }
-    .rsvp form input {
-      font-family: "Cardo", serif; }
-      .rsvp form input[type="text"] {
-        width: 100%;
-        height: 40px;
-        border-radius: 20px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px; }
-      .rsvp form input[type="submit"] {
-        background: pink;
-        border: none;
-        font-size: 20px;
-        width: 200px;
-        line-height: 40px;
-        margin: 20px auto;
-        display: block; }
-  .rsvp h2:before {
-    content: '';
-    border-bottom: 1px solid #CCC;
-    width: 39%;
-    display: block;
-    position: relative;
-    top: 27px; }
-  .rsvp h2:after {
-    content: '';
-    border-bottom: 1px solid #CCC;
-    width: 39%;
-    display: block;
-    position: relative;
-    top: -28px;
-    right: -61%; }
+    .rsvp form .ss-form-entry select {
+      width: 200px;
+      height: 30px;
+      outline: none;
+      font-size: 25px;
+      font-family: "Cardo"; }
+      .rsvp form .ss-form-entry select:after {
+        content: "U+25BE";
+        height: 20px;
+        width: 20px;
+        display: inline-block; }
+  .rsvp form .ss-navigate {
+    margin: 0 auto;
+    width: 156px; }
+  .rsvp form input[type="text"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; }
+  .rsvp form input[type="submit"] {
+    cursor: pointer;
+    width: auto;
+    outline: none; }
+.rsvp h2:before {
+  content: '';
+  border-bottom: 1px solid #CCC;
+  width: 39%;
+  display: block;
+  position: relative;
+  top: 27px; }
+.rsvp h2:after {
+  content: '';
+  border-bottom: 1px solid #CCC;
+  width: 39%;
+  display: block;
+  position: relative;
+  top: -28px;
+  right: -61%; }
 
 .clear {
   clear: both; }
@@ -531,3 +506,8 @@ hr {
 
   .rsvp h2 {
     border-bottom: none; } }
+.google iframe {
+  font-family: "Parisienne";
+  font-size: 100px; }
+  .google iframe .ss-footer {
+    display: none; }

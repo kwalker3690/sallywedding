@@ -37,13 +37,18 @@ $(function() {
             <li><a href="#weekend">Weekend Events</a></li>
             <li><a href="#accommodations">Accommodations</a></li>
             <li><a href="#registries">Registries</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
         </ul>
     </nav>
 </div>
 
 <div class="clear"></div>
 
-<div id="home" data-type="text" data-speed="3">
+<div id="pic1" class="bgd"
+    data-bottom-top="background-position-y: 0px"
+    data-top-bottom="background-position-y: -150px"></div>
+
+<div id="home">
     <div class="hometext">
         <h1>Sally & Joey</h1>
         <h3>are tying the knot</h3>
@@ -53,28 +58,28 @@ $(function() {
     </div>
 </div>
 
-<div class="pic1" data-type="background" data-speed="10"></div>
 
-
-<div class="ceremony" data-type="background" data-speed="7">
-<div id="ceremony"></div>
+<div class="ceremony">
+    <div id="ceremony"></div>
     <div class="interior">
         <div>
             <h2>The Ceremony & Reception</h2>
             <p>The ceremony and reception will both be held on the lawns of the beautiful Dunsmuir Hellman Historic Estate in Oakland.</p>
             <div class="buttons">
-                <a href="http://dunsmuir-hellman.com/">View Photos</a>
-                <a href="https://www.google.com/maps/preview/dir/Dunsmuir+Hellman+Historic+Estate,+2960+Peralta+Oaks+Ct,+Oakland,+CA+94605/@37.7658068,-122.2443192,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x808f8f09080aa547:0xf8cf6c585f5e0c74!2m2!1d-122.144566!2d37.743757">Get Directions</a>
+                <a href="http://dunsmuir-hellman.com/" class="button">View Photos</a>
+                <a href="https://www.google.com/maps/preview/dir/Dunsmuir+Hellman+Historic+Estate,+2960+Peralta+Oaks+Ct,+Oakland,+CA+94605/@37.7658068,-122.2443192,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x808f8f09080aa547:0xf8cf6c585f5e0c74!2m2!1d-122.144566!2d37.743757" class="button">Get Directions</a>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3154.973888624202!2d-122.1445656!3d37.7437568!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0:0xf8cf6c585f5e0c74!5e0!3m2!1sen!2sus!4v1389553923335" height="400" frameborder="0" style="border:0"></iframe>
         </div>
     </div>
 </div>
 
-<div class="pic2" data-type="background" data-speed="20"></div>
+<div id="pic2" class="bgd"
+    data-bottom-top="background-position-y: -20%"
+    data-top-bottom="background-position-y: 90%"></div>
 
-<div class="weekend" data-type="background" data-speed="7">
-<div id="weekend" class="in-page-anchor"></div>
+<div class="weekend">
+    <div id="weekend" class="in-page-anchor"></div>
     <div class="interior">
         <h2>Weekend Events</h2>
         <p>More information to come about Friday’s rehearsal dinner and Sunday’s brunch!</p>
@@ -82,10 +87,12 @@ $(function() {
 </div>
 
 
-<div class="pic3" data-type="background" data-speed="20"></div>
+<div id="pic3" class="bgd"
+data-bottom-top="background-position-y: 0%"
+  data-top-bottom="background-position-y: 100%"></div>
 
-<div class="accommodations" data-type="background" data-speed="7">
-<div id="accommodations" class="in-page-anchor"></div>
+<div class="accommodations">
+    <div id="accommodations" class="in-page-anchor"></div>
     <div class="interior">
         <h2>Accommodations</h2>
         <div class="images">
@@ -109,11 +116,13 @@ $(function() {
     </div>
 </div>
 
-<div class="pic4" data-type="background" data-speed="20"></div>
+<div id="pic4" class="bgd"
+data-bottom-top="background-position-y: 0%"
+  data-top-bottom="background-position-y: 100%"></div>
 
 
-<div class="registries" data-type="background" data-speed="7">
-<div id="registries" class="in-page-anchor"></div>
+<div class="registries">
+    <div id="registries" class="in-page-anchor"></div>
     <div class="interior">
         <h2>Registries</h2>
         <p>Sally and Joey are registered at the following places:</p>
@@ -137,27 +146,68 @@ $(function() {
     </div>
 </div>
 
-<div class="thanks-text" data-type="text2" data-speed="3">
+<!-- <div class="thanks-text" data-type="text2" data-speed="3">
     <p>We can't wait to celebrate with you!</p>
-</div>
+</div> -->
 
-<div class="pic5"></div>
+<div id="pic5" class="bgd"
+data-bottom-top="background-position-y: 0%"
+  data-top-bottom="background-position-y: 100%"></div>
 
 <div class="rsvp">
-<div id="rsvp" class="in-page-anchor"></div>
+    <div id="rsvp" class="in-page-anchor"></div>
     <div class="interior">
-        <h2>RSVP</h2>
-        <p>Please enter the names of everyone in your party who will be attending!</p>
-        <form>
-            <label>First Name</label>
-            <input type="text">
-            <label>Last Name</label>
-            <input type="text">
-            <input type="submit" value="RSVP">
+        <h2>R.S.V.P.</h2>
+        <p>Please enter the names of everyone in your party who will be attending. If we included only your name on the invitation, you are still welcome to bring a guest! Please include his or her name on your RSVP.</p>
+        <form action="https://docs.google.com/forms/d/1X6lkYGFttJREaagG71mmhFgm1MyMYFRbv2UU15xNAac/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+            <ol role="list" class="ss-question-list" style="padding-left: 0">
+                <div class="ss-form-question errorbox-good" role="listitem">
+                    <div dir="ltr" class="ss-item ss-item-required ss-select">
+                        <div class="ss-form-entry">
+                            <label class="ss-q-item-label" for="entry_69944323">
+                                <p class="ss-q-title">Total in your party
+                                    <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+                                    <span class="ss-required-asterisk">*</span>
+                                </p>
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                            </label>
+                            <select name="entry.69944323" id="entry_69944323" aria-label="Total in your party  " aria-required="true" required="">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="draftResponse" value="[,,&quot;5105803819113493098&quot;]">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="5105803819113493098">
+                <div class="ss-item ss-navigate">
+                    <table id="navigation-table">
+                        <tbody>
+                            <tr>
+                                <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+                                    <input type="submit" name="continue" value="Continue" id="ss-submit" class="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </ol>
         </form>
     </div>
 </div>
 
+<script type="text/javascript" src="lib/js/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+
 </body>
 </html>
-<!-- Localized -->
