@@ -88,6 +88,9 @@ hr {
 .one-half {
   width: 50%; }
 
+.one-third {
+  width: 33%; }
+
 .anchor-middle {
   margin: 0 auto; }
 
@@ -418,6 +421,9 @@ hr {
     width: 35%;
     right: -65%; } }
 @media all and (max-width: 768px) {
+  .one-third {
+    width: 100%; }
+
   #pic1, #pic2, #pic3, #pic4, #pic5 {
     background-size: 100%;
     padding: 170px 0;
